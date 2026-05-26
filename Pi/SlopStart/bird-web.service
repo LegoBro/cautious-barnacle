@@ -1,0 +1,14 @@
+[Unit]
+Description=Bird Feeder Web Server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/birdfeeder
+ExecStart=/usr/bin/python3 /home/pi/birdfeeder/webserver.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

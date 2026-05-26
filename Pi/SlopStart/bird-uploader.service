@@ -1,0 +1,14 @@
+[Unit]
+Description=Bird Feeder NAS Uploader
+After=network-online.target mnt-bird_nas.mount
+Wants=network-online.target
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/birdfeeder
+ExecStart=/usr/bin/python3 /home/pi/birdfeeder/uploader.py
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

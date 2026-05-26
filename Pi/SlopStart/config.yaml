@@ -1,0 +1,31 @@
+# /home/pi/birdfeeder/config.yaml
+gpio:
+  on_pin: 17
+  off_pin: 27
+
+recording:
+  device: "0"
+  width: 1920
+  height: 1080
+  fps: 30
+  bitrate: "6000k"
+  segement_seconds: 30 # max length for recording
+  output_dir: "./recordings"
+
+web:
+  host: "0.0.0.0"
+  port: 8080
+
+storage:
+  min_free_gb: 2
+  max_days: 30
+
+nas:
+  enabled: false
+  mount: ""
+  remote_path: ""
+  retry_seconds: 180
+
+logging:
+  dir: "./logs"
+  level: "INFO"
