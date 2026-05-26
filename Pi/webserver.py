@@ -16,7 +16,7 @@ def index():
 @app.route('/listoffiles')
 def list_of_files():
      filenames=os.listdir(cfg["recording"]["output_dir"])
-     return render_template('contents.html', files=filenames )
+     return render_template('./contents.html', files=filenames )
 
 @app.route('/listoffiles/<path:filename>')
 def read_file(filename):
