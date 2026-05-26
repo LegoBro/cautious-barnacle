@@ -6,5 +6,3 @@ def get_config():
 
 def create_logger(name):
         return
-
-print(get_config()["gpio"])

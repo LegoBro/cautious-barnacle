@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Home</title>
+    </head>
+
+    <body>
+        <h2>List of files:</h2>
+        <ol> {#this for loop prints all the files names in order#}
+        {% for file in files %}
+            <li><a href="{{url_for('read_file', filename=file)}}">{{ file }}</a></li>
+        {% endfor %}
+        </ol>    
+        {#Here if use <ol> in place of <ul> we get a list of files with numbers otherwise we get with dots.#}
+            
+</html>

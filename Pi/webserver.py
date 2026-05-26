@@ -11,12 +11,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'Hello world'
+    return 'Home'
 
 @app.route('/listoffiles')
 def list_of_files():
      filenames=os.listdir(cfg["recording"]["output_dir"])
-     print(os.listdir("."))
      return render_template('contents.html', files=filenames )
 
 @app.route('/listoffiles/<path:filename>')
