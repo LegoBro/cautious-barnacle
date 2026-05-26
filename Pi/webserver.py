@@ -21,7 +21,7 @@ def list_of_files():
 
 @app.route('/listoffiles/<path:filename>')
 def read_file(filename):
-    return send_from_directory(os.path.abspath(cfg["recording"]["output_dir"]), filename, as_attachment=False)
+    return send_from_directory(os.path.abspath(cfg["recording"]["output_dir"]), filename, as_attachment=True)
 #here for attachment i went with flase otherwise it gonna download all the contents of the files
 
 if __name__ == '__main__':
