@@ -15,8 +15,9 @@ def index():
 <head>
         <title>Home</title>
     </head>
-    <title>Home</title>
+    
     <body>
+    <h1>Home</h1>
         <a href="/listoffiles">View Recordings</a>
     </body>
 """
