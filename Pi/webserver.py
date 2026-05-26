@@ -11,7 +11,15 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'Home'
+    return """
+<head>
+        <title>Home</title>
+    </head>
+
+    <body></body>
+        <a href="/listoffiles">View Recordings</a>
+
+"""
 
 @app.route('/listoffiles')
 def list_of_files():
