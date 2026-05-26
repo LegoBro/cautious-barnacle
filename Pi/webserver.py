@@ -15,10 +15,10 @@ def index():
 <head>
         <title>Home</title>
     </head>
-
-    <body></body>
+    <title>Home</title>
+    <body>
         <a href="/listoffiles">View Recordings</a>
-
+    </body>
 """
 
 @app.route('/listoffiles')
