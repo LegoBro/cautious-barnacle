@@ -27,11 +27,13 @@ def index():
 
 @app.route('/listoffiles')
 def list_of_files():
+     logger.info("Listing Recordings!")
      filenames=os.listdir(cfg["recording"]["output_dir"])
      return render_template('contents.html', files=filenames )
 
 @app.route('/listoffiles/<path:filename>')
 def read_file(filename):
+    logger.info(f"Downloading file ${filename}")
     return send_from_directory(os.path.abspath(cfg["recording"]["output_dir"]), filename, as_attachment=True)
 #here for attachment i went with flase otherwise it gonna download all the contents of the files
 
@@ -39,7 +41,6 @@ if __name__ == '__main__':
     logger.info(f"Starting webserver on {cfg["web"]["host"]}:{cfg["web"]["port"]}")
     app.run(debug=True, host=cfg["web"]["host"], port=cfg["web"]["port"])
     logger.info(f"Webserver Shutting Down!")
-    print("Shutdown?")
     
 
 
