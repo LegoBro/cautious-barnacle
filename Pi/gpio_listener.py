@@ -5,9 +5,9 @@
 import time
 import subprocess
 import RPi.GPIO as GPIO
-from utils import load_config, create_logger
+from utils import get_config, create_logger
 
-cfg = load_config()
+cfg = get_config()
 
 logger = create_logger("gpio", cfg["logging"]["level"])
 
