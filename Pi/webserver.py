@@ -37,7 +37,7 @@ def read_file(filename):
 
 if __name__ == '__main__':
     app.run(debug=True, host=cfg["web"]["host"], port=cfg["web"]["port"])
-    logger.info(f"Starting webserver on {cfg["web"]}:{cfg["port"]}")
+    logger.info(f"Starting webserver on {cfg["web"]["host"]}:{cfg["web"]["port"]}")
 
 
 # Credit:
