@@ -5,11 +5,11 @@
 import time
 import subprocess
 import RPi.GPIO as GPIO
-from utils import load_config, setup_logger
+from utils import load_config, create_logger
 
 cfg = load_config()
 
-logger = setup_logger("gpio", cfg["logging"]["level"])
+logger = create_logger("gpio", cfg["logging"]["level"])
 
 # Pin Setup
 isPoweredPin = cfg["gpio"]["on_pin"]
