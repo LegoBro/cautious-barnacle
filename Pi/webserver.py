@@ -2,10 +2,13 @@ from flask import Flask
 from flask import render_template, send_from_directory
 import os
 
-from utils import get_config
+from utils import get_config, create_logger
+
 
 
 cfg = get_config()
+
+logger = create_logger("webserver", cfg["logging"]["level"])
 
 app = Flask(__name__)
 
@@ -34,6 +37,7 @@ def read_file(filename):
 
 if __name__ == '__main__':
     app.run(debug=True, host=cfg["web"]["host"], port=cfg["web"]["port"])
+    logger.info(f"Starting webserver on {cfg["web"]}:{cfg["port"]}")
 
 
 # Credit:
