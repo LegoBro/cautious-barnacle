@@ -36,8 +36,11 @@ def read_file(filename):
 #here for attachment i went with flase otherwise it gonna download all the contents of the files
 
 if __name__ == '__main__':
-    app.run(debug=True, host=cfg["web"]["host"], port=cfg["web"]["port"])
     logger.info(f"Starting webserver on {cfg["web"]["host"]}:{cfg["web"]["port"]}")
+    app.run(debug=True, host=cfg["web"]["host"], port=cfg["web"]["port"])
+    logger.info(f"Webserver Shutting Down!")
+    print("Shutdown?")
+    
 
 
 # Credit:
