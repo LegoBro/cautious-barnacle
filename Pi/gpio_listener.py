@@ -43,3 +43,8 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+## Resources:
+# https://pinout.xyz/
+
+# https://unix.stackexchange.com/questions/15348/writing-basic-systemd-service-files
