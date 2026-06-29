@@ -5,7 +5,7 @@ set -euo pipefail
 
 # 1. Define your target folder and destination
 # (Change "my-device-folder" to your actual folder name in GitHub)
-DEVICE_FOLDER="Pi"
+DEVICE_FOLDER="/Pi/"
 TARGET_DIR="/home/pi/birdfeeder/" # Common location for user scripts, change as needed
 
 echo "🚀 Starting installation for this device..."
