@@ -11,7 +11,7 @@ from datetime import datetime
 
 
 def get_config():
-        with open("./config.yaml", "r") as f:
+        with open("/config.yaml", "r") as f:
                 return(yaml.safe_load(f))
 
 conf = get_config()
