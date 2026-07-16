@@ -4,8 +4,12 @@
 set -euo pipefail
 
 # 1. Define your target folder and destination
-# (Change "my-device-folder" to your actual folder name in GitHub)
-DEVICE_FOLDER="Pi"
+TMP_DIR=$(mktemp -d)
+curl -L https://github.com/LegoBro/cautious-barnacle/archive/refs/heads/main.zip -o "$TMP_DIR/repo.zip"
+unzip -q "$TMP_DIR/repo.zip" -d "$TMP_DIR"
+
+DEVICE_FOLDER="$TMP_DIR/cautious-barnacle-main/Pi"
+
 TARGET_DIR="/home/pi/birdfeeder/" # Common location for user scripts, change as needed
 
 echo "🚀 Starting installation for this device..."
