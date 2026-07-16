@@ -10,7 +10,7 @@ unzip -q "$TMP_DIR/repo.zip" -d "$TMP_DIR"
 
 DEVICE_FOLDER="$TMP_DIR/cautious-barnacle-main/Pi"
 
-TARGET_DIR="/birdfeeder/" # Common location for user scripts, change as needed
+TARGET_DIR="$HOME/birdfeeder/" # Common location for user scripts, change as needed
 
 echo "🚀 Starting installation for this device..."
 
