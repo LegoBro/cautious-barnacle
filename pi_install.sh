@@ -31,4 +31,7 @@ cp -r "$DEVICE_FOLDER"/* "$TARGET_DIR"/
 # (Adjust the extension if you are deploying .py, .pl, etc.)
 find "$TARGET_DIR" -type f -name "*.sh" -exec chmod +x {} +
 
+# 6. Run secondary install script
+bash $TARGET_DIR/install.sh
+
 echo "✅ Installation complete! Files are successfully installed in $TARGET_DIR"

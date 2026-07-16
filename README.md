@@ -8,7 +8,7 @@ Secret Project
 Image
 Install flask
 
-bash <(curl -s https://raw.githubusercontent.com/LegoBro/cautious-barnacle/main/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/LegoBro/cautious-barnacle/main/pi_install.sh)
 
 
 `sudo apt install python3-flask`

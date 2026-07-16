@@ -13,7 +13,7 @@ After=multi-user.target
 [Service]
 User=root
 WorkingDirectory=/home/pi/birdfeeder
-ExecStart=/usr/bin/python3 /home/pi/birdfeeder/gpio_listener.py
+ExecStart=/usr/bin/python3 $HOME/birdfeeder/gpio_listener.py
 Restart=always
 RestartSec=2
 
@@ -31,7 +31,7 @@ Wants=network-online.target
 [Service]
 User=pi
 WorkingDirectory=/home/pi/birdfeeder
-ExecStart=/usr/bin/python3 /home/pi/birdfeeder/webserver.py
+ExecStart=/usr/bin/python3 $HOME/birdfeeder/webserver.py
 Restart=always
 RestartSec=5
 
