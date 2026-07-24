@@ -8,7 +8,7 @@ recording:
   height: 1080
   fps: 30
   bitrate: "6000k"
-  segment_seconds: 1 # max length for recording
+  segment_seconds: 60 # max length for recording
   output_dir: "./recordings"
 
 web:
