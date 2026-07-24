@@ -41,7 +41,7 @@ def start_segment(cfg, logger):
     # Example using libcamera-vid piped to ffmpeg for MP4
     cmd = [
         "bash", "-lc",
-        f"libcamera-vid -t 0 --width {width} --height {height} "
+        f"rpicamera-vid -t 0 --width {width} --height {height} "
         f"--framerate {fps} --codec h264 --inline --profile high "
         f"-n -o - | ffmpeg -y -i - -c copy -movflags +faststart {full_path}"
     ]
