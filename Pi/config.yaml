@@ -4,11 +4,11 @@ gpio:
 
 recording:
   device: "0"
-  width: 100
-  height: 50
-  fps: 3
+  width: 1920
+  height: 1080
+  fps: 30
   bitrate: "6000k"
-  segment_seconds: 30 # max length for recording
+  segment_seconds: 1 # max length for recording
   output_dir: "./recordings"
 
 web:
