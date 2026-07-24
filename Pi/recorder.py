@@ -54,8 +54,8 @@ def main():
     cfg = get_config()
     logger = create_logger("recorder", cfg["logging"]["level"])
 
-    segment_minutes = cfg["recording"]["segment_minutes"]
-    segment_duration = timedelta(minutes=segment_minutes)
+    segment_seconds = cfg["recording"]["segment_seconds"]
+    segment_duration = timedelta(seconds=segment_seconds)
 
     global current_proc, running
     current_proc, current_file = start_segment(cfg, logger)
