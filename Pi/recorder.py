@@ -68,6 +68,7 @@ def main():
             if current_proc.poll() is None:
                 current_proc.terminate()
                 current_proc.wait()
+                time.sleep(2)
             current_proc, current_file = start_segment(cfg, logger)
             segment_start = datetime.now()
 
