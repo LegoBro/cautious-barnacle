@@ -52,7 +52,7 @@ def start_segment(cfg, logger):
 
 def main():
     cfg = get_config()
-    logger = create_logger("recorder", cfg["logging"]["dir"], cfg["logging"]["level"])
+    logger = create_logger("recorder", cfg["logging"]["level"])
 
     segment_minutes = cfg["recording"]["segment_minutes"]
     segment_duration = timedelta(minutes=segment_minutes)
