@@ -53,7 +53,7 @@ User=$USER_NAME
 WorkingDirectory=$USER_HOME/birdfeeder
 ExecStart=/usr/bin/python3 $USER_HOME/birdfeeder/recorder.py
 Restart=always
-RestartSec=5
+RestartSec=5000000000
 Nice=5
 
 [Install]
