@@ -42,6 +42,26 @@ RestartSec=5
 WantedBy=multi-user.target
 EOF
 
+sudo tee /etc/systemd/system/bird-recorder.service > /dev/null <<EOF
+[Unit]
+Description=Bird Feeder Recorder
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=$USER_NAME
+WorkingDirectory=$USER_HOME/birdfeeder
+ExecStart=/usr/bin/python3 $USER_HOME/birdfeeder/recorder.py
+Restart=always
+RestartSec=5
+Nice=5
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+
 sudo systemctl daemon-reload
 sudo systemctl enable --now bird-gpio-listener.service
 sudo systemctl enable --now bird-web.service
+sudo systemctl enable --now bird-recorder.service
