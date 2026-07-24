@@ -5,7 +5,7 @@ import subprocess
 import time
 from datetime import datetime, timedelta
 
-from utils import load_config, setup_logger, ensure_free_space, timestamped_filename
+from utils import get_config, create_logger, ensure_free_space, timestamped_filename
 
 running = True
 current_proc = None
@@ -51,8 +51,8 @@ def start_segment(cfg, logger):
     return proc, full_path
 
 def main():
-    cfg = load_config()
-    logger = setup_logger("recorder", cfg["logging"]["dir"], cfg["logging"]["level"])
+    cfg = get_config()
+    logger = create_logger("recorder", cfg["logging"]["dir"], cfg["logging"]["level"])
 
     segment_minutes = cfg["recording"]["segment_minutes"]
     segment_duration = timedelta(minutes=segment_minutes)
